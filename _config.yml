@@ -16,11 +16,11 @@
 title: Kyler Little
 email: kyler.j.little@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-This website will include blog posts about various things I need to get
-out of my head (i.e. interview advice, interview experiences, school advice,
-interesting technical topics, general diary entries, etc.).
-I will also include an "About Me" section, links to my various social media,
-and coding projects.
+   This website will include blog posts about various things I need to get
+   out of my head (i.e. interview advice, interview experiences, school advice,
+   interesting technical topics, general diary entries, etc.).
+   I will also include an "About Me" section, links to my various social media,
+   and coding projects.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kylerlittle.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kyler__little
