@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 
 const _contact_info = {
     name: 'Kyler Little',
-    email: 'mailto:kyler.j.little@gmail.com'
+    email: 'mailto:kyler.j.little@gmail.com',
     phone: '2088194684'
 }
 
