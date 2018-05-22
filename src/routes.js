@@ -1,0 +1,17 @@
+import React from 'react';
+import { Route } from 'react-router-dom';
+
+// Import page components
+import App from './App';
+import Home from './pages/Home';
+import Thoughts from './pages/Thoughts';
+import Travels from './pages/Travels';
+
+// Export the Route with JSX
+export default (
+	<Route path="/" component={App}>
+	<Route path="home" component={Home} />
+	<Route path="thoughts" component={Thoughts} />
+	<Route path="travels" component={Travels} />
+	</Route>
+);

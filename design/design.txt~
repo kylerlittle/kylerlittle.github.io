@@ -1,0 +1,28 @@
+Website Design
+*Note that this is merely a basic txt file for my ideas; I am not yet to the formal software engineering process
+
+Nav Bar: Home / Thoughts / Travels / About ____ Login / Register
+
+React Components
+_App
+_LoginForm
+_RegisterForm
+_NavBar
+_Footer_ list of social media icons and a copyright 
+
+Structure
+_Home
+  |_
+
+_Thought
+
+Home
+|__ banner image
+|__ 
+
+Thoughts
+|__ list of articles on full display
+|__ search bar (by title, tags)
+|__ comment section
+    |__ user input
+    |__ display previous comments    
