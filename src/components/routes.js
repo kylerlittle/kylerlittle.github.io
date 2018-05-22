@@ -9,9 +9,7 @@ import Travels from './pages/Travels';
 
 // Export the Route with JSX
 export default (
-	<Route path="/" component={App}>
-	<Route path="home" component={Home} />
-	<Route path="thoughts" component={Thoughts} />
-	<Route path="travels" component={Travels} />
-	</Route>
+	<Route exact path="/" component={Home}>
+	<Route path="/thoughts" component={Thoughts} />
+	<Route path="/travels" component={Travels} />
 );
