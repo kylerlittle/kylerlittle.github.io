@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './css/App.css';
 import Header from './components/Header';
+import Main from './components/Main';
 import Footer from './components/Footer';
 
 /*const _contact_info = {
@@ -20,7 +21,7 @@ class App extends Component {
 	return (
 		<div className="App">
 		<Header title={this.state.welcome_message}/>
-		<main>{this.props.children}</main>
+		<Main />
 		<Footer />
 		</div>
 	);
