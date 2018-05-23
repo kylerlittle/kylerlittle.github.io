@@ -11,7 +11,7 @@ class Navbar extends Component {
 		<li><a><Link to="/thoughts"> Thoughts </Link></a></li>
 		<li><a><Link to="/travels"> Travels </Link></a></li>
 		<li><a><Link to="/about"> About </Link></a></li>
-		<li style={{float: "right"}}><a class="active"><Link to="/signin"> Sign In </Link></a></li>
+		<li style={{float: "right"}}><a className="active"><Link to="/signin"> Sign In </Link></a></li>
 		</ul>
 		</nav>
 	);
