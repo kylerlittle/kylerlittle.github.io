@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 class Navbar extends Component {
     render() {
 	return (
 		<nav>
 		<ul>
-		<li><Link to="/"> Home </Link></li>
-		<li><Link to="/thoughts"> Thoughts </Link></li>
-		<li><Link to="/travels"> Travels </Link></li>
+		<li><a><Link to="/"> Home </Link></a></li>
+		<li><a><Link to="/thoughts"> Thoughts </Link></a></li>
+		<li><a><Link to="/travels"> Travels </Link></a></li>
+		<li><a><Link to="/about"> About </Link></a></li>
+		<li style={{float: "right"}}><a class="active"><Link to="/signin"> Sign In </Link></a></li>
 		</ul>
 		</nav>
 	);
