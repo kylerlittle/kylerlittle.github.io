@@ -6,8 +6,8 @@ class Header extends Component {
     render() {
 	return (
 		<header>
+		<Title title={this.props.title}/>
 		<Navbar />
-		<Title title={this.props.title} />
 		</header>
 	);
     }

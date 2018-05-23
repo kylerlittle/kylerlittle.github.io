@@ -11,17 +11,23 @@ import Footer from './components/Footer';
 }*/
 
 class App extends Component {
-    constructor() {
-	super();
+    constructor(props) {
+	super(props);
 	this.state = {
-	    welcome_message : 'Welcome to Kyler Little\'s blog!',
+	    welcome_message: 'Welcome to ' + window.location.href + '!'
 	};
+    }
+    routeChange(nextRoute) {
+	console.log(nextRoute);
+	this.setState({
+	    welcome_message: 'You\'ve arrived at my ' + nextRoute + 'page.'
+	});
     }
     render() {
 	return (
 		<div className="App">
-		<Header title={this.state.welcome_message}/>
-		<Main />
+		<Header title={this.state.welcome_message} />
+		<Main onRouteChange={this.routeChange.bind(this)} />
 		<Footer />
 		</div>
 	);
