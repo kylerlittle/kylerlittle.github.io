@@ -4,15 +4,18 @@ import './Navbar.css';
 
 class Navbar extends Component {
     componentWillMount() {
-	//Read more here: https://medium.com/@AkyunaAkish/understanding-react-router-4-df73a66d96c4
+	// Read more here: https://medium.com/@AkyunaAkish/understanding-react-router-4-df73a66d96c4
 	this.props.history.listen(() => {
-	    console.log('The new path is: ', this.props.history.location.pathname);
+	    this.props.onRouteChange(this.props.history.location.pathname);
 	});
+    }
+    componentWillUnmount() {
+	this.props.history.unlisten();
     }
     render() {
 	return (
 		<nav>
-		<ul>
+		<ul className="topnav">
 		<li style={{float: "left"}}><Link to="/"> Home </Link></li>
 		<li style={{float: "left"}}><Link to="/thoughts"> Thoughts </Link></li>
 		<li style={{float: "left"}}><Link to="/travels"> Travels </Link></li>

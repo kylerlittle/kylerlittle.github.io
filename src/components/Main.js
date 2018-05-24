@@ -7,11 +7,6 @@ import About from '../pages/About';
 import Signin from '../pages/Signin';
 
 class Main extends Component {
-    handleChange(prevState, nextState, replace, callback?) {
-	console.log("made it");
-	this.props.onRouteChange("it changed");
-    }
-    
     render() {
 	return (
 		<main>
