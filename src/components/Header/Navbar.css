@@ -1,4 +1,10 @@
-ul {
+nav {
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent;
+}
+
+ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -6,16 +12,22 @@ ul {
     background-color: #333;
 }
 
-li a {
+ul.topnav li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 24px 26px;
     text-decoration: none;
+    border-right: 1px solid #bbb;
 }
 
-li a:hover:not(.active) {
+ul.topnav li a:hover:not(.active) {
     background-color: #111;
+}
+
+@media screen and (max-width: 600px) {
+    ul li.right,
+    ul li {float: none;}
 }
 
 .active {
