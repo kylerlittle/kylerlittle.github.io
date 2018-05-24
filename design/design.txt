@@ -13,6 +13,13 @@ _NavBar
 _Footer_ list of social media icons and a copyright 
 
 Structure
+_App
+  |_Header
+     |_
+     |_Navbar
+     |_
+  |_Main
+  |_Footer
 _Home
   |_
 
