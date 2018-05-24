@@ -5,9 +5,11 @@ Website Design
 
 
 NEXT:
-I would like to use bootstrap. I think I'll make a jumbotron (since bootstrap can handle
-the responsiveness) for my header. I'll overlay the navbar and have it be transparent.
-Then, I'll change the image of the jumbotron as the routing changes.
+I've installed react-bootstrap. I'd like to change the image of the jumbotron as the routing changes.
+The text does actually change right now... but I need to update the path that is displayed
+to something more human readable...
+Also add parallax effect to jumbotron.
+
 
 STRUCTURE
 _App

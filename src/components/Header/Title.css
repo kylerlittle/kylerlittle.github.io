@@ -1,0 +1,15 @@
+.site-name {
+    float: left;
+}
+
+.page-name {
+    float: right;
+}
+
+h1 {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    bottom: -70%;
+}
+
