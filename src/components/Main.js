@@ -14,14 +14,14 @@ class Main extends Component {
     
     render() {
 	return (
-	<main>
+		<main>
 	<Switch>
-	<Route exact path="/" onChange={this.handleChange} component={() => (<Home title="Home" />)} />
-	<Route path="/thoughts" onChange={this.handleChange} component={Thoughts} />
-	<Route path="/travels" onChange={this.handleChange} component={Travels} />
-	<Route path="/about" onChange={this.handleChange} component={About} />
-	<Route path="/signin" onChange={this.handleChange} component={Signin} />
-	</Switch>
+	<Route exact path="/" component={() => (<Home title="Home" />)} />
+	<Route path="/thoughts" component={Thoughts} />
+	<Route path="/travels" component={Travels} />
+	<Route path="/about" component={About} />
+	<Route path="/signin" component={Signin} />
+		</Switch>
 	</main>
 	);
     }

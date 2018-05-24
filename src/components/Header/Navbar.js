@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './Navbar.css';
 
 class Navbar extends Component {
+    componentWillMount() {
+	//Read more here: https://medium.com/@AkyunaAkish/understanding-react-router-4-df73a66d96c4
+	this.props.history.listen(() => {
+	    console.log('The new path is: ', this.props.history.location.pathname);
+	});
+    }
     render() {
 	return (
 		<nav>
 		<ul>
-		<li><a><Link to="/"> Home </Link></a></li>
-		<li><a><Link to="/thoughts"> Thoughts </Link></a></li>
-		<li><a><Link to="/travels"> Travels </Link></a></li>
-		<li><a><Link to="/about"> About </Link></a></li>
-		<li style={{float: "right"}}><a className="active"><Link to="/signin"> Sign In </Link></a></li>
+		<li style={{float: "left"}}><Link to="/"> Home </Link></li>
+		<li style={{float: "left"}}><Link to="/thoughts"> Thoughts </Link></li>
+		<li style={{float: "left"}}><Link to="/travels"> Travels </Link></li>
+		<li style={{float: "left"}}><Link to="/about"> About </Link></li>
+		<li style={{float: "right"}} className="active"><Link to="/signin"> Sign In </Link></li>
 		</ul>
 		</nav>
 	);
     }
 }
 
-export default Navbar;
+export default withRouter(Navbar);
