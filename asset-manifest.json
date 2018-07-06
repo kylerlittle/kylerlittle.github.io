@@ -1,6 +1,10 @@
 {
-  "main.css": "static/css/main.fc1f65d6.css",
-  "main.css.map": "static/css/main.fc1f65d6.css.map",
-  "main.js": "static/js/main.1546f1d1.js",
-  "main.js.map": "static/js/main.1546f1d1.js.map"
+  "main.css": "static/css/main.b533e170.css",
+  "main.css.map": "static/css/main.b533e170.css.map",
+  "main.js": "static/js/main.e8b6ce91.js",
+  "main.js.map": "static/js/main.e8b6ce91.js.map",
+  "static/media/about.jpg": "static/media/about.bb7f0dc2.jpg",
+  "static/media/home.jpg": "static/media/home.f96feaf7.jpg",
+  "static/media/thoughts.jpg": "static/media/thoughts.d204d881.jpg",
+  "static/media/travels.jpg": "static/media/travels.48e88c31.jpg"
 }
