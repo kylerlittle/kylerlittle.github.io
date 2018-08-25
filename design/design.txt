@@ -5,43 +5,53 @@ Website Design
 
 
 NEXT:
-I've installed react-bootstrap. I'd like to change the image of the jumbotron as the routing changes.
-The text does actually change right now... but I need to update the path that is displayed
-to something more human readable...
-Also add parallax effect to jumbotron.
-
+- Make navbar responsive. It's almost there; just needs a little fixing.
+- Reformat architecture to match STRUCTURE below
+- Get Header in shape. Start with styling the navbar; then, work on SVG transition
 
 STRUCTURE
 _App
   |_Header
-     |_Jumbotron
-        |_Title (kylerlittle.github.io  <div className="route-text" $currentRoute </div>) ==> update responsively
-	   |_Style route-text differently than site name
-	|_Navbar (transparent, no blocks, white text)
+     |_Navbar (transparent, no blocks, sleep/modern)
+     |_CoolSVG__ use react-spring to animate transition between using interpolation
   |_Main
      |_Route (render the appropriate component based on route)
         |_Home
+	|_Projects
+	|_Languages
+	|_Experience
 	|_Thoughts
-	|_Travels
-	|_About
-	|_SignIn
   |_Footer
      |_Copyright
      |_SocialMediaIcons
 
+MISC
+_Routes.js
+  |_Define all routes with id, display value, and svg path
 
 PAGES
 Home
-|__
+|__Quick introduction to website and quick summary of myself with picture.
+Projects
+|__Use react cards
+Languages
+|__Under Construction__ eventually embed tableau vizzes (probably thru do-you-even-code-bro site)
+Experience
+|__Under Construction
 Thoughts
 |__ list of articles on full display
 |__ search bar (by title, tags)
 |__ comment section
     |__ user input
     |__ display previous comments
-Travels
-|__
-About
-|__
+
+BUTTON (not separate page)
 SignIn
 |__Use Facebook and Google API to log in using third-party authentication
+
+
+REQUIREMENTS
+- responsive design-- should work equally well on my phone and laptops
+- have cool animations
+- tell about myself, the website, my projects, what languages I code in, work experience; also include blog entries
+- all my social media and contact info and copyright info in footer
