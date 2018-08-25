@@ -3,6 +3,10 @@ import { Link, withRouter } from 'react-router-dom';
 import './Navbar.css';
 
 class Navbar extends Component {
+	constructor(props) {
+		super(props);
+		this.toggleResponsive = this.toggleResponsive.bind(this);
+	}
     componentWillMount() {
 	// Read more here: https://medium.com/@AkyunaAkish/understanding-react-router-4-df73a66d96c4
 	this.props.history.listen(() => {
@@ -11,16 +15,25 @@ class Navbar extends Component {
     }
     componentWillUnmount() {
 	this.props.history.unlisten();
-    }
+	}
+	toggleResponsive() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
     render() {
 	return (
 		<nav>
-		<ul className="topnav">
-		<li style={{float: "left"}}><Link to="/"> Home </Link></li>
-		<li style={{float: "left"}}><Link to="/thoughts"> Thoughts </Link></li>
-		<li style={{float: "left"}}><Link to="/travels"> Travels </Link></li>
-		<li style={{float: "left"}}><Link to="/about"> About </Link></li>
-		<li style={{float: "right"}} className="active"><Link to="/signin"> Sign In </Link></li>
+		<ul className="topnav" id="myTopnav">
+		<li><Link to="/"> Home </Link></li>
+		<li><Link to="/projects"> Projects </Link></li>
+		<li><Link to="/languages"> Languages </Link></li>
+		<li><Link to="/experience"> Experience </Link></li>
+		<li className="active"><Link to="/thoughts"> Thoughts </Link></li>
+		<li className="icon" onClick={this.toggleResponsive}><i className="fa fa-bars"></i></li>
 		</ul>
 		</nav>
 	);
