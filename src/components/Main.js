@@ -5,19 +5,20 @@ import Thoughts from '../pages/Thoughts';
 import Projects from '../pages/Projects';
 import Experience from '../pages/Experience';
 import Languages from '../pages/Languages';
+import './styles/Main.css';
 
 class Main extends Component {
     render() {
 	return (
-		<main>
-	<Switch>
-	<Route exact path="/" component={() => (<Home title="Home" />)} />
-	<Route path="/thoughts" component={Thoughts} />
-	<Route path="/projects" component={Projects} />
-	<Route path="/experience" component={Experience} />
-	<Route path="/languages" component={Languages} />
+		<div className="page-wrap">
+		<Switch>
+		<Route exact path="/" component={() => (<Home displayName="Home" />)} />
+		<Route path="/thoughts" component={() => (<Thoughts displayName="Thoughts" />)} />
+		<Route path="/projects" component={() => (<Projects displayName="Projects" />)} />
+		<Route path="/experience" component={() => (<Experience displayName="Work Experience" />)} />
+		<Route path="/languages" component={() => (<Languages displayName="Programming Languages" />)} />
 		</Switch>
-	</main>
+	</div>
 	);
     }
 }

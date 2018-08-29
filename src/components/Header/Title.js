@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Title.css';
+import './styles/Title.css';
 
 class Title extends Component {
     shouldComponentUpdate(nextProps, nextState) {
@@ -10,9 +10,6 @@ class Title extends Component {
 		<h1>
 		<div className="site-name">
 		{this.props.title}
-	    </div>
-		<div className="page-name">
-		{this.props.path}
 	    </div>
 	    </h1>
 	);
