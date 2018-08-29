@@ -5,7 +5,9 @@ Website Design
 
 
 NEXT:
-- Make navbar responsive. It's almost there; just needs a little fixing.
+- Make navbar prettier.
+- Footer should be at bottom, slightly greyer color
+- Remove unneeded packages by first removing from package.json, then using `npm prune`.
 - Reformat architecture to match STRUCTURE below
 - Get Header in shape. Start with styling the navbar; then, work on SVG transition
 

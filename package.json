@@ -1,12 +1,13 @@
 {
    "name": "kylerlittle.github.io",
-   "version": "0.1.0",
+   "version": "1.0.0",
    "private": true,
    "homepage": "https://kylerlittle.github.io/",
    "dependencies": {
       "react": "^16.4.0",
       "react-bootstrap": "^0.32.1",
       "react-dom": "^16.4.0",
+      "react-responsive-navbar": "^1.0.11",
       "react-router": "^4.2.0",
       "react-router-dom": "^4.2.2",
       "react-router-page-transition": "^3.1.0",
