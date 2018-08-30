@@ -13,6 +13,8 @@ class App extends Component {
 		width: '100%',
 		position: 'fixed',
 		overflow: 'auto',
+		overflowY: 'scroll',
+		WebkitOverflowScrolling: 'touch',
 	};
 	return (
 		<div className="App" style={appStyle}>
