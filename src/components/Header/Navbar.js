@@ -6,13 +6,15 @@ import ResponsiveMenu from 'react-responsive-navbar';
 
 class Navbar extends Component {
     componentWillMount() {
-	// Read more here: https://medium.com/@AkyunaAkish/understanding-react-router-4-df73a66d96c4
-	this.props.history.listen(() => {
-	    this.props.onRouteChange(this.props.history.location.pathname);
-	});
-    }
+		// Read more here: https://medium.com/@AkyunaAkish/understanding-react-router-4-df73a66d96c4
+		this.props.history.listen(() => {
+			// First, first onRouteChange event handler (passed in via props)
+			this.props.onRouteChange(this.props.history.location.pathname);
+			// If navbar is in small-mode & open, shut it since we just changed routes. 
+		});
+	}
     componentWillUnmount() {
-	this.props.history.unlisten();
+		this.props.history.unlisten();
 	}
     render() {
 	return (

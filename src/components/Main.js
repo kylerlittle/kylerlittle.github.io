@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Home from '../pages/Home';
 import Thoughts from '../pages/Thoughts';
 import Projects from '../pages/Projects';
@@ -17,6 +17,7 @@ class Main extends Component {
 		<Route path="/projects" component={() => (<Projects displayName="Projects" />)} />
 		<Route path="/experience" component={() => (<Experience displayName="Work Experience" />)} />
 		<Route path="/languages" component={() => (<Languages displayName="Programming Languages" />)} />
+		<Redirect from="*" to="/" />
 		</Switch>
 	</div>
 	);

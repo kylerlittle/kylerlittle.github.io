@@ -34,6 +34,12 @@ li {
 .fa:hover {
     opacity: 0.7;
     color: red;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    transition: transform 0.3s ease-out;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+        -moz-transition: -moz-transform 0.3s ease-out;
 }
 
 .fa-linkedin {
