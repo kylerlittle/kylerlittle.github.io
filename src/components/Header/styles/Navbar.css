@@ -48,6 +48,7 @@ li > a:hover:before {
         padding: 0;
     }
     #menu-button {
+        margin-top: 10px;
         font-size: 30px;
     }
     li.nav-bar-item {

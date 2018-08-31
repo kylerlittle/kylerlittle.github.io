@@ -5,8 +5,15 @@ Website Design
 
 
 NEXT:
-- Make navbar prettier.
-- Footer should be at bottom, slightly greyer color
+- For mobile nav-bar menu, need to close the menu when the user selects a route. Might have to modify
+  the internals of react-responsive-navbar... but I think I can do it thru onRouteChange somehow.
+  Would just need to modify the styling somehow. It probably shouldn't be done in componentWillMount,
+  although maybe! After all, this is just the navbar component. The only catch would be when navbar
+  first mounts... My concern is that you can't really access the DOM in this life cycle method since
+  the component hasn't mounted. Might have to have some internal state in this component and then use
+  ComponentDidMount...
+- Page Transition between pages 
+- Add content!!!
 - Remove unneeded packages by first removing from package.json, then using `npm prune`.
 - Reformat architecture to match STRUCTURE below
 - Get Header in shape. Start with styling the navbar; then, work on SVG transition
