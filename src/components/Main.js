@@ -13,11 +13,11 @@ class Main extends Component {
 	return (
 		<div className="page-wrap">
 		<Switch>
-		<Route exact path="/" component={() => (<Home displayName="Home" />)} />
-		<Route path="/thoughts" component={() => (<Thoughts displayName="Thoughts" />)} />
-		<Route path="/projects" component={() => (<Projects displayName="Projects" />)} />
-		<Route path="/experience" component={() => (<Experience displayName="Work Experience" />)} />
-		<Route path="/languages" component={() => (<Languages displayName="Programming Languages" />)} />
+		<Route exact path="/" component={() => (<Home displayName="HOME" />)} />
+		<Route path="/thoughts" component={() => (<Thoughts displayName="THOUGHTS" />)} />
+		<Route path="/projects" component={() => (<Projects displayName="PROJECTS" />)} />
+		<Route path="/experience" component={() => (<Experience displayName="WORK EXPERIENCE" />)} />
+		<Route path="/languages" component={() => (<Languages displayName="PROGRAMMING LANGUAGES" />)} />
 		<Redirect from="*" to="/" />
 		</Switch>
 	</div>
