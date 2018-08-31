@@ -7,7 +7,7 @@ class Title extends Component {
     }
     render() {
 	return (
-		<h1>
+		<h1 className="title-wrapper">
 		<div className="site-name">
 		{this.props.title}
 	    </div>

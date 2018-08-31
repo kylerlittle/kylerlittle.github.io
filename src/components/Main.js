@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import Home from '../pages/Home';
-import Thoughts from '../pages/Thoughts';
-import Projects from '../pages/Projects';
-import Experience from '../pages/Experience';
-import Languages from '../pages/Languages';
+import Home from './pages/Home';
+import Thoughts from './pages/Thoughts';
+import Projects from './pages/Projects';
+import Experience from './pages/Experience';
+import Languages from './pages/Languages';
 import './styles/Main.css';
+import PageTransition from 'react-router-page-transition';
 
 class Main extends Component {
     render() {

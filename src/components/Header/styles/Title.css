@@ -1,11 +1,13 @@
 .site-name {
-    float: left;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
 }
 
-h1 {
+h1.title-wrapper {
     position: relative;
-    padding-left: 20px;
-    padding-right: 20px;
-    bottom: -70%;
+    padding-top: 325px;
+    padding-left: 10px;
+    padding-bottom: 0px;
 }
 
