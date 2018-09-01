@@ -43,13 +43,21 @@ li > a:hover:before {
 }
 
 @media (max-width: 820px) {
+    .small-menu {
+        border-top: 1px solid #f2535f;
+        border-bottom: 2px solid #f2535f;
+        background: #201616;
+        padding-bottom: 0.5em;
+    }
     padding: 10px 0;
     .fa {
         padding: 0;
     }
     #menu-button {
         margin-top: 10px;
-        font-size: 30px;
+        font-size: 35px;
+        color: white;
+        text-shadow: rgb(68, 68, 68) 0px 5px 5px;
     }
     li.nav-bar-item {
         list-style-type: none;
@@ -57,9 +65,11 @@ li > a:hover:before {
     li.nav-bar-item a {
         width: 100%;
         display: block;
-        font-size: 25px;
+        font-size: 28px;
         position: relative;
         text-decoration: none;
+        color: white;
+        text-shadow: rgb(68, 68, 68) 0px 5px 5px;
     }
     li.nav-bar-item > a:before {
         visibility: hidden;

@@ -6,7 +6,7 @@ import Projects from './pages/Projects';
 import Experience from './pages/Experience';
 import Languages from './pages/Languages';
 import './styles/Main.css';
-import PageTransition from 'react-router-page-transition';
+// import PageTransition from 'react-router-page-transition';
 
 class Main extends Component {
     render() {
