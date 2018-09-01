@@ -20,6 +20,10 @@ li.social-media-icon {
     margin-left: 20px;
 }
 
+a {
+    color:transparent;
+}
+
 li.social-media-icon a.fa {
     padding: 22px;
     font-size: 40px;
