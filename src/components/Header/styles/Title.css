@@ -11,3 +11,8 @@ h1.title-wrapper {
     padding-bottom: 0px;
 }
 
+@media (max-width: 600px) {
+    h1.title-wrapper {
+        padding-top: 225px;
+    }
+}
