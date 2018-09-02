@@ -15,32 +15,18 @@ class Navbar extends Component {
     componentWillMount() {
 		// Read more here: https://medium.com/@AkyunaAkish/understanding-react-router-4-df73a66d96c4
 		this.props.history.listen(() => {
-			// First, first onRouteChange event handler (passed in via props)
+			// onRouteChange event handler (passed in via props)
 			this.props.onRouteChange(this.props.history.location.pathname);
-			// If navbar is in small-mode & open, shut it since we just changed routes. 
-			// NOTE: updating state here won't trigger a re-render
-			this.setState({
-				...this.state,
-				routeChanged: true
-			})
 		});
 	}
     componentWillUnmount() {
 		this.props.history.unlisten();
 	}
-	componentDidMount() {
-		if (this.state.isSmallMenuOpen && this.state.routeChanged) {
-			this.setState({
-				isSmallMenuOpen: false,
-				routeChanged: false,
-			});
-		}
-	}
     render() {
 	return (
 		<ResponsiveMenu
-		menuOpenButton={<i id="menu-button" class="fa fa-bars"></i>}
-        menuCloseButton={<i id="menu-button" class="fa fa-close"></i>}
+		menuOpenButton={<i id="menu-button" className="fa fa-bars"></i>}
+        menuCloseButton={<i id="menu-button" className="fa fa-close"></i>}
         changeMenuOn="820px"	
         largeMenuClassName="large-menu"
         smallMenuClassName="small-menu"

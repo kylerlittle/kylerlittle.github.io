@@ -1,0 +1,18 @@
+/* COVER PHOTO from: https://googleplus-covers.com/fantasy-covers */
+
+.jumbotron {
+    height: 350px;
+	margin-bottom: 0px;
+	padding-top: 5px;
+	padding-bottom: 0px;
+	background: url('../assets/home.jpg');
+	background-size: cover;
+	color: white;
+	text-shadow: #444 0 5px 5px;
+}
+
+@media (max-width: 600px) {
+    .jumbotron {
+        height: 250px;
+    }
+}

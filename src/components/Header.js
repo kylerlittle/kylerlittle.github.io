@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import Title from './Header/Title';
 import Navbar from './Header/Navbar';
 import { Jumbotron } from 'react-bootstrap';
-
-// COVER PHOTO from: https://googleplus-covers.com/fantasy-covers
-import coverIm from './assets/home.jpg';
+import './styles/Header.css';
 
 class Header extends Component {
     constructor(props) {
@@ -17,26 +15,20 @@ class Header extends Component {
     }
     
     onRouteChange(newPath) {
-		this.setState({
-			title: this.state.title,
-			path: newPath
-		});
+			// HACK: onRouteChange, click button to close. If other buttons exist in DOM with 'role="button"', this will fail.
+			// Eventually, fix this.
+			var buttons = document.querySelectorAll('[role="button"]');
+			if (buttons.length !== 0) buttons[0].click();
+			this.setState({
+				title: this.state.title,
+				path: newPath
+			});
     }
 
     render() {
-		var jumbotronStyle = {
-			height: '350px',
-			marginBottom: '0px',
-			paddingTop: '5px',
-			paddingBottom: '0px',
-			background: `url(${coverIm})`,
-			backgroundSize: 'cover',
-			color: 'white',
-			textShadow: '#444 0 5px 5px'
-		};
 		return (
 			<header>
-			<Jumbotron style={jumbotronStyle}>
+			<Jumbotron>
 			<Title title={this.state.title} path={this.state.path} />
 			</Jumbotron>
 			<Navbar onRouteChange={this.onRouteChange.bind(this)} />
