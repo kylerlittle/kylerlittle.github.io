@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Experience extends Component {
     render() {
 	return (
-		<div className="experience">
+		<div id="experience-page" className="transition-item">
 		<h1>{this.props.displayName}</h1>
 		<p>This is my work experience page.</p>
 		</div>

@@ -9,7 +9,8 @@ class Header extends Component {
 		super(props);
 		this.state = {
 			title: "kylerlittle.github.io",
-			path: "/",
+			oldPath: "/home",
+			currentPath: "/home",
 			coverIm: "./assets/home.jpg"
 		}
     }
@@ -19,11 +20,31 @@ class Header extends Component {
 			// Eventually, fix this.
 			var buttons = document.querySelectorAll('[role="button"]');
 			if (buttons.length !== 0) buttons[0].click();
+
 			this.setState({
-				title: this.state.title,
-				path: newPath
+				...this.state,
+				oldPath: this.state.currentPath,
+				currentPath: newPath
 			});
-    }
+		}
+		
+		// Ya... so I forgot this is in Header.js... We probably want this to passed as a prop to each subpage.
+		// 
+		componentDidMount() {
+			// Add appropriate transition class depending on location in array.
+			var orderedRoutes = ['home', 'projects', 'languages', 'experience', 'thoughts'];
+			var newRoute = this.state.currentPath.substring(1), oldRoute = this.state.oldPath.substring(1);
+			var newElement = document.getElementById(`${newRoute}-page`);
+			console.log("hi");
+			// also need to remove fade class off other element.
+			if (orderedRoutes.indexOf(oldRoute) < orderedRoutes.indexOf(newRoute)) {
+				// newRoute is to right of oldRoute, so it should fade in from right
+				
+				newElement.className += "fade-right";
+			} else if (orderedRoutes.indexOf(oldRoute) > orderedRoutes.indexOf(newRoute)) {
+				newElement.className += "fade-left";
+			}
+		}
 
     render() {
 		return (
