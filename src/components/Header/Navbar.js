@@ -33,11 +33,11 @@ class Navbar extends Component {
 		menu={
 			<div id="nav-bar">
 			<ul>
-				<li class="nav-bar-item"><Link to="/"> Home </Link></li>
-				<li class="nav-bar-item"><Link to="/projects"> Projects </Link></li>
-				<li class="nav-bar-item"><Link to="/languages"> Languages </Link></li>
-				<li class="nav-bar-item"><Link to="/experience"> Experience </Link></li>
-				<li class="nav-bar-item"><Link to="/thoughts"> Thoughts </Link></li>
+				<li className="nav-bar-item"><Link to="/home"> Home </Link></li>
+				<li className="nav-bar-item"><Link to="/projects"> Projects </Link></li>
+				<li className="nav-bar-item"><Link to="/languages"> Languages </Link></li>
+				<li className="nav-bar-item"><Link to="/experience"> Experience </Link></li>
+				<li className="nav-bar-item"><Link to="/thoughts"> Thoughts </Link></li>
 			</ul>
 			</div>
 		}
