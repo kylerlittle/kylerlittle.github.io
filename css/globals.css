@@ -1,4 +1,5 @@
 
 :root {
-    --header-height: 500px;
+    --min-header-height: 400px;
+    --header-height: 80vh;
 }

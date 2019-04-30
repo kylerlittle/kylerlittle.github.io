@@ -14,6 +14,17 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    overflow: scroll;
+}
+
+.header {
+    height: 100vh;
 }
 
 /*
@@ -44,7 +55,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid rgb(15, 12, 12);
     margin: 1em 0;
     padding: 0;
 }
