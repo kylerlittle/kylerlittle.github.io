@@ -3,6 +3,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 60px;
 }
 
 .typewriter h1 {
@@ -10,7 +11,7 @@
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+    letter-spacing: 0em; /* Adjust as needed */
     animation: 
       typing 3.5s steps(40, end),
       blink-caret .75s step-end infinite;
@@ -37,7 +38,8 @@
   vertical-align: middle;
   background-color: transparent;
   display: table;   /* Allow the centering to work */
-	margin: 0 auto;
+  margin: 0 auto;
+  padding-inline-start: 0;
 }
 
 li.nav-bar-item {
@@ -84,3 +86,24 @@ li > a:hover:before {
   transform: scaleX(1);
 }
 /***** end nav-bar css *****/
+
+.container {
+  position: relative;
+  height: 500px;
+  padding-top: 60px;
+}
+
+img#pic-of-me {
+  display: table-cell;
+  vertical-align: middle;
+  width: auto;
+  height: 400px;
+  max-width: 90%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 1em;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  image-orientation: from-image;
+}
