@@ -1,22 +1,17 @@
 from django.db import models
 
 class BlogEntry(models.Model):
-    entry_id = models.AutoField()
-    datetime_created = models.DateTimeField('')
-    # author_id = 
-    # entry_title = 
-    # entry_text = 
+    datetime_created = models.DateTimeField(auto_now_add=True)
+    author = models.ForeignKey('User', on_delete=models.CASCADE)
+    entry_title = models.CharField(max_length=255)
+    entry_text = models.TextField()
 
 class EntryComment(models.Model):
-    # blog_id foreign key
-    # user_id foreign key
-
-    # django does this automatically, but I like better naming
-    comment_id = models.BigIntegerField(primary_key=True)
-    # comment_text
-    # datetime_written
+    blog = models.ForeignKey('BlogEntry', on_delete=models.CASCADE)
+    user = models.ForeignKey('User', on_delete=models.CASCADE)
+    comment_text = models.TextField()
+    datetime_written = models.DateTimeField(auto_now_add=True)
 
 class User(models.Model):
-    # user_id
-    # user_name
-    # user_email
+    user_name = models.CharField(max_length=255)
+    user_email = models.EmailField()
