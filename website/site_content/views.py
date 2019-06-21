@@ -25,7 +25,11 @@ def blog(request,
          month=datetime.today().month,
          day=datetime.today().day
          ):
-    return HttpResponse("Blog entry from {y}/{m}/{d}".format(y=year, m=month, d=day))
+    context = {
+        "text": "Blog entry from {y}/{m}/{d}".format(y=year, m=month, d=day)
+    }
+    return render(request, 'site_content/blog.html', context)
 
 def resume(request):
-    return HttpResponse("Resume")
+    context = {}
+    return render(request, 'site_content/resume.html', context)
