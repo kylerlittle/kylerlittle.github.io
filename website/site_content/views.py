@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from datetime import datetime
 
+from site_content.util.util import loadJSON
+
 def index(request):
     context = {}
     return render(request, 'site_content/index.html', context)
@@ -12,7 +14,10 @@ def about_me(request):
     return render(request, 'site_content/aboutme.html', context)
 
 def projects(request):
-    context = {}
+    # load projects from JSON
+    context = {
+        "projects": loadJSON("site_content/static/projects/projects.JSON")
+    }
     return render(request, 'site_content/projects.html', context)
 
 def blog(request,

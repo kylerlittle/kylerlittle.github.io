@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="{% static "css/globals.css" %}">
   <link rel="stylesheet" href="{% static "css/particles.css" %}">
   <link rel="stylesheet" href="{% static "css/content.css" %}">
+  {% block css %}{% endblock css %}
 </head>
 
 <body onload="init();">
@@ -34,18 +35,23 @@
   <![endif]-->
 
   <!-- Header with navbar -->
-  
-      {% block particles_lead_tag %}{% endblock particles_lead_tag %}
-        <div id="nav-bar">
-          <ul>
-            <li class="nav-bar-item"><a href="aboutme">About Me</a></li>
-            <li class="nav-bar-item"><a href="projects">Projects</a></li>
-            <li class="nav-bar-item"><a href="blog">Blog</a></li>
-            <li class="nav-bar-item"><a href="resume">Resume</a></li>
-          </ul>
-        </div>
-        {% block greeting %}{% endblock greeting %}
-      {% block particles_end_tag %}{% endblock particles_end_tag %}
+
+  {% block particles_lead_tag %}{% endblock particles_lead_tag %}
+  <div id="nav-bar">
+    <ul>
+      <li class="nav-bar-item">
+        <a href="/">
+          <img src="{% static "img/home_icon.png" %}" style="height: 30px">
+        </a>
+      </li>
+      <li class="nav-bar-item hover-effect"><a href="aboutme">About Me</a></li>
+      <li class="nav-bar-item hover-effect"><a href="projects">Projects</a></li>
+      <li class="nav-bar-item hover-effect"><a href="blog">Blog</a></li>
+      <li class="nav-bar-item hover-effect"><a href="resume">Resume</a></li>
+    </ul>
+  </div>
+  {% block greeting %}{% endblock greeting %}
+  {% block particles_end_tag %}{% endblock particles_end_tag %}
 
   {% block content %}{% endblock %}
 
