@@ -4,19 +4,16 @@ from django.shortcuts import render
 from datetime import datetime
 
 def index(request):
-    context = {
-        'var': 5
-    }
+    context = {}
     return render(request, 'site_content/index.html', context)
 
 def about_me(request):
-    context = {
-        'var': 5
-    }
-    return render(request, 'site_content/index.html', context)
+    context = {}
+    return render(request, 'site_content/aboutme.html', context)
 
 def projects(request):
-    return HttpResponse("Projects")
+    context = {}
+    return render(request, 'site_content/projects.html', context)
 
 def blog(request,
          year=datetime.today().year,
