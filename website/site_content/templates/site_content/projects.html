@@ -1,0 +1,11 @@
+{% extends "site_content/base.html" %}
+{% load static %}
+
+{% block content %}
+<div>
+    Here is a visualization of my coding abilities.
+    <div id="vizContainer" style="width:800px; height:700px;">
+    </div>
+    <script src="{% static "js/tableau.js" %}"></script>
+</div>
+{% endblock content %}
