@@ -61,11 +61,11 @@ li.nav-bar-item a {
   outline: 0;
 }
 
-li.nav-bar-item > a:hover {
+li.hover-effect > a:hover {
   color: rgb(0, 0, 0);
 }
 
-li.nav-bar-item > a:before {
+li.hover-effect > a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -80,7 +80,7 @@ li.nav-bar-item > a:before {
   transition: all 0.3s ease-in-out 0s;
 }
 
-li > a:hover:before {
+li.hover-effect > a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);

@@ -1,0 +1,9 @@
+[
+    {
+        "projectName": "A Worse Yelp",
+        "projectImage": "../img/",
+        "link": "https://github.com/kylerlittle/yelp-app",
+        "technologiesUsed": ["React.js", "Express", "Node.js", "PostgreSQL", "npm"],
+        "description": "A basic web application similar to Yelp utilizing Yelp DataSets. Built with React, Express, Node, and PostgreSQL."
+    }
+]
