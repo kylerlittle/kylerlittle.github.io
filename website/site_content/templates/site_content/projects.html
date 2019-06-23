@@ -24,7 +24,7 @@
                         <marquee behavior="slider" truespeed=10>
                             {% for tech in project.technologiesUsed %}
                             {{ tech }}
-                            {% if not forloop.last %}<pre style="display: inline">  &#{{ project.separator }};  </pre>{% endif %}
+                            {% if not forloop.last %}<pre style="display: inline">  &{{ project.separator }};  </pre>{% endif %}
                             {% endfor %}
                         </marquee>
                     </div>
