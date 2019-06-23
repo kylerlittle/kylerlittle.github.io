@@ -1,21 +1,30 @@
 [
     {
-        "projectName": "A Simple Yelp",
+        "projectName": "Suffix Tree",
+        "projectImage": "img/suffix-tree.png",
+        "altImage": "a suffix tree",
+        "link": "https://github.com/kylerlittle/computational-genomics/tree/master/pa/2",
+        "technologiesUsed": ["C++", "Makefile", "Shell", "Docker", "Googletest"],
+        "separator": "#127794",
+        "description": "Implementation of the suffix tree data structure using McCreight's linear time construction algorithm."
+    },
+    {
+        "projectName": "Simplified Yelp",
         "projectImage": "img/yelp.png",
         "altImage": "a pizza",
         "link": "https://github.com/kylerlittle/yelp-app",
         "technologiesUsed": ["Javascript", "SQL", "Python", "React.js", "Express", "Node.js", "PostgreSQL", "npm"],
-        "separator": "127829",
-        "description": "A basic web application similar to Yelp utilizing Yelp DataSets. Built with React, Express, Node, and PostgreSQL."
+        "separator": "#127829",
+        "description": "A web application similar to Yelp which runs queries on large Yelp datasets."
     },
     {
         "projectName": "do u even code, bro?",
         "projectImage": "img/do-u-even-code.png",
         "altImage": "a pizza",
         "link": "https://github.com/kylerlittle/do-you-even-code-bro",
-        "technologiesUsed": ["Python", "Shell", "Github API", "PostgreSQL", "Tableau Desktop"],
-        "separator": "128187",
-        "description": "A tool which automatically generates a report on how much and how I code and visualizes it in Tableau Desktop"
+        "technologiesUsed": ["Python", "Shell", "GitHub API", "PostgreSQL", "Tableau Desktop"],
+        "separator": "#128187",
+        "description": "A tool which automatically generates a report on how much I code and with which languages and visualizes it in Tableau Desktop."
     },
     {
         "projectName": "EXT2 File System",
@@ -23,16 +32,61 @@
         "altImage": "a filesystem",
         "link": "https://github.com/kylerlittle/ext2-fs",
         "technologiesUsed": ["C", "Shell", "Ubuntu"],
-        "separator": "128193",
-        "description": "A Linux-compatible EXT2 file system that supports most common operations."
+        "separator": "#128193",
+        "description": "A Linux-compatible EXT2 file system that supports the most common file system operations."
     },
     {
-        "projectName": "A Simple Yelp",
-        "projectImage": "img/yelp.png",
-        "altImage": "a pizza",
-        "link": "https://github.com/kylerlittle/yelp-app",
-        "technologiesUsed": ["React.js", "Express", "Node.js", "PostgreSQL", "npm"],
-        "separator": "128187",
-        "description": "A basic web application similar to Yelp utilizing Yelp DataSets. Built with React, Express, Node, and PostgreSQL."
+        "projectName": "Coach Bot",
+        "projectImage": "img/coach-bot.jpg",
+        "altImage": "a robot coach",
+        "link": "https://github.com/kylerlittle/coach-bot",
+        "technologiesUsed": ["Python", "Shell", "spaCy", "pip", "virtualenv"],
+        "separator": "#129302",
+        "description": "Your personal fitness AI that helps you live a healthier lifestyle as a full-time worker."
+    },
+    {
+        "projectName": "News Bias Analyzer",
+        "projectImage": "img/paddle-paddle.jpeg",
+        "altImage": "paddle paddle logo ",
+        "link": "https://github.com/iqover9000/hackmit_2017",
+        "technologiesUsed": ["Python", "Javascript", "CSS", "HTML", "Docker", "PaddlePaddle"],
+        "separator": "#128240",
+        "description": "A deep learning web application that determines the accuracy of a given news article."
+    },
+    {
+        "projectName": "Web Voting System",
+        "projectImage": "img/web-vote.jpg",
+        "altImage": "voting",
+        "link": "https://github.com/kylerlittle/web-voting-sys",
+        "technologiesUsed": ["C#", "Javascript", "CSS", "HTML", "ASP.NET"],
+        "separator": "#128499",
+        "description": "A configurable web application in which users can create a poll and specify candidates, a date range for voting, and who can vote."
+    },
+    {
+        "projectName": "Perceptron Animator",
+        "projectImage": "img/perceptron.png",
+        "altImage": "perceptron graph",
+        "link": "https://github.com/kylerlittle/perceptron",
+        "technologiesUsed": ["Python", "matplotlib", "numpy"],
+        "separator": "#128200",
+        "description": "Implementation and animation of the machine learning algorithm known as the perceptron."
+    },
+    {
+        "projectName": "Spreadsheet Application",
+        "projectImage": "img/spreadsheet.png",
+        "altImage": "a spreadsheet",
+        "link": "https://github.com/kylerlittle/oops/tree/master/Spreadsheet/Spreadsheet",
+        "technologiesUsed": ["C#", "WinForms", ".NET"],
+        "separator": "Sigma",
+        "description": "A simplified Windows spreadsheet app for organization, analysis, and storage of data in tabular form."
+    },
+    {
+        "projectName": "Simple Compiler & Simulator",
+        "projectImage": "img/compiler.jpg",
+        "altImage": "compiler architecture",
+        "link": "https://github.com/kylerlittle/simple-compiler-sim",
+        "technologiesUsed": ["C++", "NetBeans", "Linux"],
+        "separator": "#129299",
+        "description": "An object-oriented compiler and simulator for writing programs in a contrived, high-level language similar to Basic."
     }
 ]
