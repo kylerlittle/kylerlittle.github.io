@@ -4,8 +4,27 @@
         "projectImage": "img/yelp.png",
         "altImage": "a pizza",
         "link": "https://github.com/kylerlittle/yelp-app",
-        "technologiesUsed": ["React.js", "Express", "Node.js", "PostgreSQL", "npm"],
+        "technologiesUsed": ["Javascript", "SQL", "Python", "React.js", "Express", "Node.js", "PostgreSQL", "npm"],
+        "separator": "127829",
         "description": "A basic web application similar to Yelp utilizing Yelp DataSets. Built with React, Express, Node, and PostgreSQL."
+    },
+    {
+        "projectName": "do u even code, bro?",
+        "projectImage": "img/do-u-even-code.png",
+        "altImage": "a pizza",
+        "link": "https://github.com/kylerlittle/do-you-even-code-bro",
+        "technologiesUsed": ["Python", "Shell", "Github API", "PostgreSQL", "Tableau Desktop"],
+        "separator": "128187",
+        "description": "A tool which automatically generates a report on how much and how I code and visualizes it in Tableau Desktop"
+    },
+    {
+        "projectName": "EXT2 File System",
+        "projectImage": "img/ext2fs.png",
+        "altImage": "a filesystem",
+        "link": "https://github.com/kylerlittle/ext2-fs",
+        "technologiesUsed": ["C", "Shell", "Ubuntu"],
+        "separator": "128193",
+        "description": "A Linux-compatible EXT2 file system that supports most common operations."
     },
     {
         "projectName": "A Simple Yelp",
@@ -13,22 +32,7 @@
         "altImage": "a pizza",
         "link": "https://github.com/kylerlittle/yelp-app",
         "technologiesUsed": ["React.js", "Express", "Node.js", "PostgreSQL", "npm"],
-        "description": "A basic web application similar to Yelp utilizing Yelp DataSets. Built with React, Express, Node, and PostgreSQL."
-    },
-    {
-        "projectName": "A Simple Yelp",
-        "projectImage": "img/yelp.png",
-        "altImage": "a pizza",
-        "link": "https://github.com/kylerlittle/yelp-app",
-        "technologiesUsed": ["React.js", "Express", "Node.js", "PostgreSQL", "npm"],
-        "description": "A basic web application similar to Yelp utilizing Yelp DataSets. Built with React, Express, Node, and PostgreSQL."
-    },
-    {
-        "projectName": "A Simple Yelp",
-        "projectImage": "img/yelp.png",
-        "altImage": "a pizza",
-        "link": "https://github.com/kylerlittle/yelp-app",
-        "technologiesUsed": ["React.js", "Express", "Node.js", "PostgreSQL", "npm"],
+        "separator": "128187",
         "description": "A basic web application similar to Yelp utilizing Yelp DataSets. Built with React, Express, Node, and PostgreSQL."
     }
 ]
