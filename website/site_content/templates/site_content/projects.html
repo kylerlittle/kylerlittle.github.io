@@ -9,31 +9,34 @@
     {% for project in projects %}
     <!-- if first, start row tag -->
     {% if forloop.first %}<div class="row">{% endif %}
-        <div class="col-sm-4">
-            <div class="card-deck mb-3 text-center">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 d-flex align-items-stretch">
+            <div class="card-group mb-3 text-center">
                 <div class="card mb-4 shadow-sm">
                     <img src={% static project.projectImage %} class="card-img-top" alt={{ project.altImage }}
-                        width="auto" style="background-repeat: no-repeat">
+                        height="250px" style="background-repeat: no-repeat">
                     <div class="card-body">
-                        <h4> {{ project.projectName }} </h4>
+                        <h4> {{ project.projectName }}
+                            <a href={{ project.link }}>
+                                <img src={% static "img/github.png" %} alt="link to code" height="35px" width="35px">
+                            </a>
+                        </h4>
                         <p> {{ project.description }} </p>
-                        <h3> <a href={{ project.link }}> &lt;/&gt; </a> </h3>
+                        <marquee behavior="slider" truespeed=10>
+                            {% for tech in project.technologiesUsed %}
+                            {{ tech }}
+                            {% if not forloop.last %}<pre style="display: inline">  &#{{ project.separator }};  </pre>{% endif %}
+                            {% endfor %}
+                        </marquee>
                     </div>
                 </div>
             </div>
         </div>
-    <!-- if divisible by 3, outputted 3 already, so close row and start fresh -->
-    {% if forloop.counter|divisibleby:3 %}
-        </div>
-        <div class="row">{% endif %}
-    <!-- if last, need to close row tag -->
-    {% if forloop.last %}</div>{% endif %}
+        <!-- if divisible by 3, outputted 3 already, so close row and start fresh -->
+        {% if forloop.counter|divisibleby:4 %}
+    </div>
+    <div class="row">{% endif %}
+        <!-- if last, need to close row tag -->
+        {% if forloop.last %}</div>{% endif %}
     {% endfor %}
 </div>
-<!-- <div>
-    Here is a visualization of my coding abilities.
-    <div id="vizContainer" style="width:800px; height:700px;">
-    </div>
-    <script src="{% static "js/tableau.js" %}"></script>
-</div> -->
 {% endblock content %}
