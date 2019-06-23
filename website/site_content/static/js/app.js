@@ -116,7 +116,3 @@ particlesJS('particles-js',
     }
   }
 );
-
-function init() {
-  initViz();
-}
