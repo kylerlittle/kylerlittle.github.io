@@ -1,43 +1,57 @@
 .typewriter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 60px;
 }
 
 .typewriter h1 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: 0em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
-    color: black;
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 48px;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0em;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  color: black;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 48px;
 }
 
 /* The typing effect */
+
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0
+  }
+  to {
+    width: 100%
+  }
 }
 
 /* The typewriter cursor effect */
+
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: orange;
+  }
 }
 
-
 /***** begin nav-bar css *****/
+
 #nav-bar ul {
   vertical-align: middle;
   background-color: transparent;
-  display: table;   /* Allow the centering to work */
+  display: table;
+  /* Allow the centering to work */
   margin: 0 auto;
   padding-inline-start: 0;
 }
@@ -61,11 +75,11 @@ li.nav-bar-item a {
   outline: 0;
 }
 
-li.hover-effect > a:hover {
+li.hover-effect>a:hover {
   color: rgb(0, 0, 0);
 }
 
-li.hover-effect > a:before {
+li.hover-effect>a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -80,11 +94,55 @@ li.hover-effect > a:before {
   transition: all 0.3s ease-in-out 0s;
 }
 
-li.hover-effect > a:hover:before {
+li.hover-effect>a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
+/***** hamburger icon animation *****/
+
+.collapse-button {
+  visibility: hidden;
+  /* hide button normally */
+  height: 30px;
+  cursor: pointer;
+  width: 0px;
+}
+
+li.nav-bar-item.collapse-button {
+  margin: 0px;
+}
+
+/***** hamburger icon animation *****/
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/***** end hamburger icon animation *****/
+
 /***** end nav-bar css *****/
 
 .container {
@@ -107,9 +165,69 @@ img.about-me {
   image-orientation: from-image;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-family: 'Fjalla One', sans-serif;
+}
+
+/***** media queries *****/
+
+/***** switch to mobile navbar *****/
+
+@media screen and (max-width: 700px) {
+  #nav-bar ul {
+    background-color: transparent;
+    display: grid;
+    /* grid for vertical list */
+    margin: 0 auto;
+    padding-inline-start: 0;
+    border-top: 4px solid orange;
+    border-bottom: 4px solid orange;
+    background: #2A3132;
+  }
+  #nav-bar ul li:not(:first-child) {
+    display: none;
+  }
+  #nav-bar.responsive ul li:not(:first-child) {
+    display: grid;
+  }
+  .collapse-button {
+    visibility: visible;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  li.nav-bar-item.collapse-button {
+    margin: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  li.nav-bar-item {
+    margin: 2px;
+    text-shadow: rgb(68, 68, 68) 0px 5px 5px;
+  }
+  li.nav-bar-item a {
+    color: orange;
+  }
+  .bar1, .bar2, .bar3 {
+    background-color: orange;
+  }
+  /* Filter generator to convert from black to target hex value:
+  https://codepen.io/sosuke/pen/Pjoqqp */
+  li.nav-bar-item a img {
+    filter: invert(69%) sepia(35%) saturate(4115%) hue-rotate(0deg) brightness(103%) contrast(107%);
+  }
+  /* Disable hover effect */
+  li.hover-effect>a:hover:before {
+    visibility: hidden;
+  }
+  .typewriter {
+    margin-top: 25%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .typewriter h1 {
+    border-right: .15em solid orange;
+    font-size: 32px;
+  }
 }
