@@ -37,8 +37,16 @@
   <!-- Header with navbar -->
 
   {% block particles_lead_tag %}{% endblock particles_lead_tag %}
-  <div id="nav-bar">
+  <div id="nav-bar" class="">
     <ul>
+      <li class="nav-bar-item collapse-button">
+        <!-- Collapse button -->
+        <div class="collapse-button" onclick="toggleCollapseButton(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </li>
       <li class="nav-bar-item">
         <a href="/">
           <img src="{% static "img/home_icon.png" %}" style="height: 30px">
@@ -59,7 +67,6 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="{% static "js/vendor/jquery-3.3.1.min.js" %}"><\/script>')</script>
-  <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
   <script src="{% static "js/plugins.js" %}"></script>
   <script src="{% static "js/particles.js" %}"></script>
   <script src="{% static "js/app.js" %}"></script>
