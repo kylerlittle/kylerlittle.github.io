@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'q=$a#u3brp^kty^rvd6x8ek)f=lckysfp9fbrx-qcd-2mubmr('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '52.39.95.131'
@@ -128,4 +128,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # collectstatic copies all files frm STATIC_URL to STATIC_ROOT location
-STATIC_ROOT = '../static/'
+STATIC_ROOT = '/srv/www/static/'
