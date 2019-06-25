@@ -4,3 +4,6 @@
 # python
 venv
 __pycache__
+
+# credentials
+*.pem
