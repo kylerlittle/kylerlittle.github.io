@@ -26,7 +26,8 @@ with open('/etc/secret_key.txt') as f:
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '52.39.95.131'
+    '52.39.95.131',
+    '.kylerlittle.com'
 ]
 
 
