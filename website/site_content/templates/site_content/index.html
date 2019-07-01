@@ -1,18 +1,26 @@
-  {% extends "site_content/base.html" %}
+{% extends "site_content/base.html" %}
+{% load static %}
+{% block css %}
+<script src="{% static "js/particles.js" %}"></script>
+{% endblock css %}
 
-  {% block particles_lead_tag %}
-  <div class="header">
-  <div id="particles-js">
-  {% endblock particles_lead_tag %}
+{% block particles_lead_tag %}
+<div class="header">
+<div id="particles-js">
+{% endblock particles_lead_tag %}
 
 
-  {% block greeting %}
-  <div class="typewriter">
-    <h1>Hello, my name is Kyler.</h1>
-  </div>
-  {% endblock greeting %}
+{% block greeting %}
+<div class="typewriter">
+  <h1>Hello, my name is Kyler.</h1>
+</div>
+{% endblock greeting %}
 
-  {% block particles_end_tag %}
-  </div>
-  </div>
-  {% endblock particles_end_tag %}
+{% block particles_end_tag %}
+</div>
+</div>
+{% endblock particles_end_tag %}
+
+{% block js %}
+<script src="{% static "js/particles.js" %}"></script>
+{% endblock js %}
