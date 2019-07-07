@@ -1,9 +1,15 @@
 {% extends "site_content/base.html" %}
+{% load static %}
 
 {% block content %}
-<hr/>
 <div class="text-center">
-    <h1> Currently updating this. Check back soon for the PDF! </h1>
+    <h1> Last updated on 7/7/2019. </h1>
+<object data="{% static  "pdf/resume.pdf" %}#view=FitH" type="application/pdf" width="100%" height="1000px">
+    <p>
+        Your web browser doesn't have a PDF plugin.
+        Instead you can <a href="{% static  "pdf/resume.pdf" %}" download>click here to
+        download the PDF file.</a>
+    </p>
+</object>
 </div>
-<hr/>
 {% endblock content %}
