@@ -6,6 +6,16 @@ For server initialization
 - set up virtualenv & activate
 - install requirements.txt
 
+For deployment of new code
+- to sign in, ```ssh -i key.pem ubuntu@52.39.95.131```
+- Activate virtualenv
+- install requirements.txt
+- collectstatic --clear
+- either before or after ^, need to compress and minify js
+
+Reload gunicorn, system daemon, and restart nginx
+- sudo systemctl restart gunicorn && sudo systemctl daemon-reload && sudo systemctl restart nginx
+
 ## Developer Usage
 Run dev server
 ```
@@ -19,18 +29,5 @@ python manage.py makemigrations site_content
 
 If removing static assests, then clear STATIC_ROOT directory entirely. Otherwise, collectstatic merely checks the time stamps to only copy what has changed.
 ```
-python manage.py collectstatic --clear
+ --clear
 ```
-
-## TODOs
-- v1
-  - favicon updates
-  - migration of remainder of ```client``` code/docs/files to django site.
-  - mini-fication of static assets, potentially including some image compression -- potentially using gulp?
-  - deployment scripts
-  - deploy!
-- v2
-  - smoother mobile navbar
-  - make mobile look like less shit
-  - blog layout
-  - resume
