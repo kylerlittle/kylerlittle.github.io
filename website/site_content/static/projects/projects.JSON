@@ -1,9 +1,18 @@
 [
     {
+        "projectName": "HackMIT Puzzle Solutions",
+        "projectImage": "img/hackmitlogo.svg",
+        "altImage": "the word hack",
+        "link": "https://github.com/kylerlittle/hackmit-puzzles-2019",
+        "technologiesUsed": ["Python", "Javascript", "concurrent", "asyncio"],
+        "separator": "#129513",
+        "description": "Solutions to HackMIT's infamous puzzles for 2019 -- we made top 50 once again!"
+    },
+    {
         "projectName": "Suffix Tree",
         "projectImage": "img/suffix-tree.png",
         "altImage": "a suffix tree",
-        "link": "https://github.com/kylerlittle/computational-genomics/tree/master/pa/2",
+        "link": "https://github.com/kylerlittle/suffix-tree",
         "technologiesUsed": ["C++", "Makefile", "Shell", "Docker", "Googletest"],
         "separator": "#127794",
         "description": "Implementation of the suffix tree data structure using McCreight's linear time construction algorithm."
@@ -77,7 +86,7 @@
         "altImage": "a spreadsheet",
         "link": "https://github.com/kylerlittle/oops/tree/master/Spreadsheet/Spreadsheet",
         "technologiesUsed": ["C#", "WinForms", ".NET"],
-        "separator": "Sigma",
+        "separator": "#128202",
         "description": "A simplified Windows spreadsheet app for organization, analysis, and storage of data in tabular form."
     },
     {

@@ -1,0 +1,27 @@
+.project-tech-item {
+    text-align: center;
+}
+
+span {
+    white-space: nowrap;
+    text-overflow: clip;
+    display: inline-flex;
+    overflow: hidden;
+    width: -webkit-fill-available;
+}
+
+span .cool-text-animation {
+    padding-bottom: 5px;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-name: cool-anim;
+}
+
+@keyframes cool-anim {
+    from {
+        transform:translate(-50%);
+    }
+    to {
+        transform:translate(100%);
+    }
+  }
