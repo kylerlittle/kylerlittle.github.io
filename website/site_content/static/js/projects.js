@@ -1,5 +1,5 @@
 // animation duration
-const DURATION = 4000;
+const DURATION = 2500;
 
 var TextAnimation = function (techItemElement, toRotate) {
     this.toRotate = toRotate;
@@ -11,23 +11,18 @@ var TextAnimation = function (techItemElement, toRotate) {
 TextAnimation.prototype.tick = function () {
     // use i to keep track of word in array we're displaying
     var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
 
-    // set visibility
-    // this.techItemElement = this.techItemElement.children[i];
-    // this.techItemElement.style.visibility = 'visible';
+    // wrap word in animated span
+    this.techItemElement.innerHTML = '<span class="wrap cool-text-animation">' + this.toRotate[i] + '</span>';
 
-    // span class that has the animation
-    // this.techItemElement.children[i].style.visibility = 'visible';
-    this.techItemElement.innerHTML = '<span class="wrap cool-text-animation">' + fullTxt + '</span>';
-
+    // set animation duration
     this.techItemElement.children[0].style.animationDuration = (DURATION / 1000).toString() + 's';
     
-
     var that = this;
     this.loopNum++;
 
     setTimeout(function () {
+        // reset HTML to "" so nothing is displayed and no animations continue in the background
         that.techItemElement.innerHTML = "";
         that.tick();
     }, DURATION);
