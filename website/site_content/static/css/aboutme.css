@@ -25,12 +25,8 @@ img.about-me {
     transform: translate(-50%, -50%);
     color: white;
     font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     text-shadow: 2px 2px 4px #000000;
     font-weight: bold;
 }
@@ -39,11 +35,30 @@ h4.rotating-text {
     color: black;
     position: absolute;
     top: 25%;
-    left: 25%
+    left: 25%;
 }
 
 @media(max-width:992px) {
     h4.rotating-text {
         display: none;
+    }
+}
+
+/* Primary pointing system cannot hover. */
+@media (hover:none), (hover:on-demand) {
+    #img-hover-instructions {
+        display: none;
+    }
+    .img-caption {
+        opacity: 1;
+        position: inherit;
+        top: inherit;
+        left: inherit;
+        color: black;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        font-weight: bold;
+        text-shadow: none;
     }
 }
