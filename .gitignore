@@ -10,3 +10,7 @@ __pycache__
 
 # deployment
 deploy.sh
+
+# damn Mac OS
+.DS_Store
+*.icloud
