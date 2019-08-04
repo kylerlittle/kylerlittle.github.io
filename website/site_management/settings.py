@@ -148,6 +148,7 @@ PIPELINE = {
     'PIPELINE_ENABLED': COMPRESSION,
     'JS_COMPRESSOR': 'pipeline.compressors.uglifyjs.UglifyJSCompressor',
     'UGLIFYJS_BINARY': '/usr/bin/env ./node_modules/uglify-js/bin/uglifyjs',
+    'YUGLIFY_BINARY': '/usr/bin/env ./node_modules/yuglify/bin/yuglify',
     'STYLESHEETS': {
         'main': {
             'source_filenames': (
