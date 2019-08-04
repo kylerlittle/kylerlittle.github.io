@@ -7,3 +7,6 @@ __pycache__
 
 # credentials
 *.pem
+
+# deployment
+deploy.sh
