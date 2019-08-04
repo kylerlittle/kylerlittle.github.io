@@ -5,7 +5,9 @@
 /* Primary pointing system cannot hover. */
 @media (hover:none), (hover:on-demand) { 
     #kyler-resume {
-        visibility: hidden;
+        display: none !important;
+        max-height: 0 !important;
+        line-height: 0 !important;
     }
 
     #download-kyler-resume {
