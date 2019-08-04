@@ -14,3 +14,11 @@ deploy.sh
 # damn Mac OS
 .DS_Store
 *.icloud
+
+# node
+node_modules
+
+# ignore compressed assets
+*.min.js
+*.min.css
+dev-static/
