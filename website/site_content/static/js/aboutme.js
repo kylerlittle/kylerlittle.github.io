@@ -1,6 +1,3 @@
-/**
- * On hover of img
- */
 function onMouseEnter() {
     var img = this.children[0];
     img.style.filter = "brightness(30%)";
