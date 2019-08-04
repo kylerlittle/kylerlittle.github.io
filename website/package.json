@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "personal portfolio website and blog of Kyler Little",
   "dependencies": {
-    "uglify-js": "^3.6.0"
+    "uglify-js": "^3.6.0",
+    "yuglify": "^2.0.0"
   },
   "devDependencies": {},
   "scripts": {},
