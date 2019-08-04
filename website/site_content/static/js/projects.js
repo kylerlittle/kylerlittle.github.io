@@ -1,6 +1,3 @@
-// animation duration
-const DURATION = 2500;
-
 var TextAnimation = function (techItemElement, toRotate) {
     this.toRotate = toRotate;
     this.techItemElement = techItemElement;
@@ -9,6 +6,9 @@ var TextAnimation = function (techItemElement, toRotate) {
 };
 
 TextAnimation.prototype.tick = function () {
+    // animation duration
+    var DURATION = 2500;
+
     // use i to keep track of word in array we're displaying
     var i = this.loopNum % this.toRotate.length;
 
@@ -32,8 +32,11 @@ window.onload = function () {
     var elements = document.getElementsByClassName('project-tech');
     for (var i = 0; i < elements.length; i++) {
         var toRotate = Array
-            .from(elements[i].children)
-            .map(techItem => techItem.innerText);
+            .from(elements[i].children);
+
+        for (var j = 0; j < toRotate.length; ++j) {
+            toRotate[j] = toRotate[j].innerText;
+        }
 
         if (toRotate) {
             new TextAnimation(elements[i], toRotate);

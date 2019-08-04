@@ -1,0 +1,19 @@
+{
+  "name": "com.kylerlittle.www",
+  "version": "1.0.0",
+  "description": "personal portfolio website and blog of Kyler Little",
+  "dependencies": {
+    "uglify-js": "^3.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylerlittle/kylerlittle.github.io.git"
+  },
+  "author": "kylerlittle",
+  "bugs": {
+    "url": "https://github.com/kylerlittle/kylerlittle.github.io/issues"
+  },
+  "homepage": "https://github.com/kylerlittle/kylerlittle.github.io#readme"
+}

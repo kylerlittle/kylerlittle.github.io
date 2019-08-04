@@ -1,10 +1,15 @@
 {% extends "site_content/base.html" %}
 {% load static %}
+{% load pipeline %}
+
+<!-- minified CSS -->
 {% block css %}
-<link rel="stylesheet" href="{% static "css/aboutme.css" %}">
+{% stylesheet 'aboutme' %}
 {% endblock css %}
+
+<!-- minified Javascript -->
 {% block js %}
-<script src="{% static "js/aboutme.js" %}"></script>
+{% javascript 'aboutme' %}
 {% endblock js %}
 
 {% block content %}

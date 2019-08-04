@@ -2,7 +2,7 @@
     position: absolute;
     width: 100%;
     height: var(--header-height);
-    min-height: var(--min-header-height)
+    min-height: var(--min-header-height);
     background-color: transparent;
     background-image: url("");
     background-repeat: no-repeat;

@@ -1,7 +1,10 @@
 {% extends "site_content/base.html" %}
 {% load static %}
+{% load pipeline %}
+
+<!-- minified CSS -->
 {% block css %}
-<link rel="stylesheet" href="{% static "css/resume.css" %}">
+{% stylesheet 'resume' %}
 {% endblock css %}
 
 {% block content %}

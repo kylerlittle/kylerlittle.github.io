@@ -1,8 +1,15 @@
 {% extends "site_content/base.html" %}
-{% load static %}
+{% load pipeline %}
+
+<!-- minified CSS -->
 {% block css %}
-<script src="{% static "js/particles.js" %}"></script>
+{% stylesheet 'particles' %}
 {% endblock css %}
+
+<!-- minified Javascript -->
+{% block js %}
+{% javascript 'particles' %}
+{% endblock js %}
 
 {% block particles_lead_tag %}
 <div class="header">
@@ -20,7 +27,3 @@
 </div>
 </div>
 {% endblock particles_end_tag %}
-
-{% block js %}
-<script src="{% static "js/particles.js" %}"></script>
-{% endblock js %}

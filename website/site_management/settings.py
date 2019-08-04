@@ -24,12 +24,15 @@ with open('/etc/secret_key.txt') as f:
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+COMPRESSION = True
 
 ALLOWED_HOSTS = [
     '52.39.95.131',
     '.kylerlittle.com'
 ]
 
+if DEBUG:
+    ALLOWED_HOSTS.extend(['localhost'])
 
 # Application definition
 
@@ -41,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pipeline',
 ]
 
 MIDDLEWARE = [
@@ -129,4 +133,82 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # collectstatic copies all files frm STATIC_URL to STATIC_ROOT location
-STATIC_ROOT = '/srv/www/static/'
+STATIC_ROOT = 'site_content/static/' if DEBUG else '/srv/www/static/'
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
+)
+
+# Django Compression Pipeline
+PIPELINE = {
+    'PIPELINE_ENABLED': COMPRESSION,
+    'JS_COMPRESSOR': 'pipeline.compressors.uglifyjs.UglifyJSCompressor',
+    'UGLIFYJS_BINARY': '/usr/bin/env ./node_modules/uglify-js/bin/uglifyjs',
+    'STYLESHEETS': {
+        'main': {
+            'source_filenames': (
+              'css/normalize.css',
+              'css/main.css',
+              'css/globals.css',
+              'css/content.css',
+            ),
+            'output_filename': 'css/main.min.css',
+        },
+        'aboutme': {
+            'source_filenames': (
+              'css/aboutme.css',
+            ),
+            'output_filename': 'css/aboutme.min.css',
+        },
+        'particles': {
+            'source_filenames': (
+              'css/particles.css',
+            ),
+            'output_filename': 'css/particles.min.css',
+        },
+        'projects': {
+            'source_filenames': (
+              'css/projects.css',
+            ),
+            'output_filename': 'css/projects.min.css',
+        },
+        'resume': {
+            'source_filenames': (
+              'css/resume.css',
+            ),
+            'output_filename': 'css/resume.min.css',
+        },
+    },
+    'JAVASCRIPT': {
+        'main': {
+            'source_filenames': (
+              'js/vendor/modernizr-3.6.0.min.js',
+              'js/plugins.js',
+              'js/app.js',
+            ),
+            'output_filename': 'js/main.min.js',
+        },
+        'aboutme': {
+            'source_filenames': (
+                'js/aboutme.js',
+            ),
+            'output_filename': 'js/aboutme.min.js',
+        },
+        'particles': {
+            'source_filenames': (
+                'js/particles.js',
+            ),
+            'output_filename': 'js/particles.min.js',
+        },
+        'projects': {
+            'source_filenames': (
+                'js/projects.js',
+            ),
+            'output_filename': 'js/projects.min.js',
+        }
+    },
+}
