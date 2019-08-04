@@ -1,5 +1,11 @@
 {% extends "site_content/base.html" %}
 {% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static "css/aboutme.css" %}">
+{% endblock css %}
+{% block js %}
+<script src="{% static "js/aboutme.js" %}"></script>
+{% endblock js %}
 
 {% block content %}
 <!-- Basic content -- i.e. short intro to me -->
@@ -12,19 +18,27 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6 col-lg-4">
-            <img class="about-me" src="{% static "img/about-me-1.jpg" %}" />
+        <div class="col-lg-4 text-center">
+            <h4 class="rotating-text">
+                I'm <br /> passionate about <br />
+                <span class="txt-rotate" data-period="1000" data-rotate='[ "family.", "friends.", "community." ]' style="color: orange">
+                </span>
+            </h4>
         </div>
-        <div class="col-md-6 col-lg-4">
-            <img class="about-me" src="{% static "img/kyler-professional.JPG" %}" />
+        <div class="col-lg-4 text-center">
+            <img class="about-me" src="{% static "img/about-me-main.jpg" %}" style="border-radius: 50%" />
         </div>
-        <div class="col-md-12 col-lg-4">
-            <img class="about-me" src="{% static "img/about-me-2.jpg" %}" />
+        <div class="col-lg-4 text-center">
+            <h4 class="rotating-text">
+                My <br /> hobbies include <br />
+                <span class="txt-rotate" data-period="1000" data-rotate='[ "coding.", "running.", "hiking.", "coffee.", "reading.", "traveling." ]' style="color: orange">
+                </span>
+            </h4>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-12">
-            <br/>
+            <br />
             <p>
                 I’m skilled at algorithmic design, writing clean, communicative code, and development in
                 complex technology stacks. In my two summers at Tableau, I created automatically-refreshing
@@ -53,8 +67,125 @@
             </p>
             I’m seeking an entry-level software engineering role starting January 2020. Contact me here or at
             kyler.j.little@gmail.com.
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h4>
+                Hover over each image to learn more &#128522;
+            </h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1">
+            <div class="row"></div>
+        </div>
+        <div class="col-lg-10">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="img-container">
+                        <img class="about-me" src="{% static "img/about-me-1.jpg" %}" />
+                        <div class="img-caption">
+                            A photo from the Tableau Intern Summit, July 2019
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="img-container">
+                        <img class="about-me" src="{% static "img/about-me-2.jpg" %}" />
+                        <div class="img-caption">
+                            Closing the keynote at Hack WA, January 2019
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="img-container">
+                        <img class="about-me" src="{% static "img/about-me-3.jpg" %}" />
+                        <div class="img-caption">
+                            Hackers and organizers taking a fun break at Hack WA, January 2019
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <div class="row"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1">
+            <div class="row"></div>
+        </div>
+        <div class="col-lg-10">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="img-container">
+                        <img class="about-me" src="{% static "img/about-me-4.jpg" %}" />
+                        <div class="img-caption">
+                            My college teammates at an awards banquet, April 2019
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="img-container">
+                        <img class="about-me" src="{% static "img/about-me-5.jpg" %}" />
+                        <div class="img-caption">
+                            At the top of Aasgard Pass in the Alpine Lakes Wilderness, July 2019
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="img-container">
+                        <img class="about-me" src="{% static "img/about-me-6.jpg" %}" />
+                        <div class="img-caption">
+                            A selfie with Machu Picchu, July 2017
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <div class="row"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1">
+            <div class="row"></div>
+        </div>
+        <div class="col-lg-10">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="img-container">
+                        <img class="about-me" src="{% static "img/about-me-7.jpg" %}" />
+                        <div class="img-caption">
+                            Qualified for NCAA West Preliminary Rounds in the 3km Steeplechase, May 2019
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="img-container">
+                        <img class="about-me" src="{% static "img/about-me-8.jpg" %}" />
+                        <div class="img-caption">
+                            My CrimsonCode Organizing Team and I, March 2018
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="img-container">
+                        <img class="about-me" src="{% static "img/about-me-9.jpg" %}" />
+                        <div class="img-caption">
+                            Listening intently to Tableau CEO Adam Selipsky, July 2018
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <div class="row"></div>
         </div>
     </div>
 </div>

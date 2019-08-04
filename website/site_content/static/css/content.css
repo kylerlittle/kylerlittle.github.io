@@ -150,20 +150,6 @@ li.nav-bar-item.collapse-button {
   height: 500px;
 }
 
-img.about-me {
-  display: table-cell;
-  vertical-align: middle;
-  width: auto;
-  max-width: 90%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border-radius: 1em;
-  margin: 0 auto;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  image-orientation: from-image;
-}
-
 h1, h2, h3, h4 {
   font-family: 'Fjalla One', sans-serif;
 }

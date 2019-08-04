@@ -1,0 +1,49 @@
+.img-container {
+    position: relative;
+    text-align: center;
+}
+
+img.about-me {
+    display: table-cell;
+    vertical-align: middle;
+    width: auto;
+    max-width: 90%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 1em;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    image-orientation: from-image;
+}
+
+.img-caption {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px #000000;
+    font-weight: bold;
+}
+
+h4.rotating-text {
+    color: black;
+    position: absolute;
+    top: 25%;
+    left: 25%
+}
+
+@media(max-width:992px) {
+    h4.rotating-text {
+        display: none;
+    }
+}
