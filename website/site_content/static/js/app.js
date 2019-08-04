@@ -1,8 +1,8 @@
 /**
  * <div class="collapse-button"> is clicked.
  */
-function toggleCollapseButton(collapseButton) {
-  collapseButton.classList.toggle("change");
+function toggleCollapseButton() {
+  this.classList.toggle("change");
 
   /* Additionally, display remainder of contents by displaying list. */
   var navBar = document.getElementById("nav-bar");
@@ -12,3 +12,5 @@ function toggleCollapseButton(collapseButton) {
     navBar.className = "";
   }
 }
+
+$("#collapse-button").click(toggleCollapseButton);
