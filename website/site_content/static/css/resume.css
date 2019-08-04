@@ -1,0 +1,14 @@
+#download-kyler-resume {
+    visibility: hidden;
+}
+
+/* Primary pointing system cannot hover. */
+@media (hover:none), (hover:on-demand) { 
+    #kyler-resume {
+        visibility: hidden;
+    }
+
+    #download-kyler-resume {
+        visibility: visible;
+    }
+}
