@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "personal portfolio website and blog of Kyler Little",
   "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cache": "^1.1.2",
+    "gulp-cli": "^2.2.0",
+    "imagemin-mozjpeg": "^8.0.0",
     "uglify-js": "^3.6.0",
     "yuglify": "^2.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-imagemin": "^6.0.0"
+  },
   "scripts": {},
   "repository": {
     "type": "git",

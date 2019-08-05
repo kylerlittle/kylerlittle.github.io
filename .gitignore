@@ -18,7 +18,10 @@ deploy.sh
 # node
 node_modules
 
-# ignore compressed assets
+# ignore compressed JS/CSS assets
 *.min.js
 *.min.css
 dev-static/
+
+# ignore uncompressed image assets
+img-uncompressed/
