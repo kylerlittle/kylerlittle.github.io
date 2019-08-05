@@ -19,9 +19,18 @@ span .cool-text-animation {
 
 @keyframes cool-anim {
     from {
-        transform:translate(-50%);
+        transform: translate(-50%);
     }
     to {
-        transform:translate(100%);
+        transform: translate(100%);
     }
-  }
+}
+
+@media(max-width:576px){
+    .project-row {
+        width: 70%;
+    }
+    .small-screen-project-row-padding {
+        width: 15%;
+    }
+}

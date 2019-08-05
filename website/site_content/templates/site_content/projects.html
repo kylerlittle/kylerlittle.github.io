@@ -24,7 +24,8 @@
     {% for project in projects %}
     <!-- if first, start row tag -->
     {% if forloop.first %}<div class="row">{% endif %}
-        <div class="col-xs-12 col-sm-6 col-lg-3 d-flex align-items-stretch">
+        <div class="small-screen-project-row-padding"></div>
+        <div class="project-row col-xs-12 col-sm-6 col-lg-3 d-flex">
             <div class="card-group mb-3 text-center">
                 <div class="card mb-4 shadow-sm">
                     <img src={% static project.projectImage %} class="card-img-top img-fluid" alt={{ project.altImage }}
@@ -48,6 +49,7 @@
                 </div>
             </div>
         </div>
+        <div class="small-screen-project-row-padding"></div>
         <!-- if divisible by 3, outputted 3 already, so close row and start fresh -->
         {% if forloop.counter|divisibleby:4 %}
     </div>
